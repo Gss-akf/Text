@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私域运营链路设计</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3; /* 主题蓝 */
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 40px;
+            border-left: 4px solid #007bff; /* 亮蓝 */
+            padding-left: 10px;
+        }
+        h3 {
+            color: #28a745; /* 绿色 */
+            margin-top: 20px;
+        }
+        .mermaid {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #fdfdfd;
+            overflow-x: auto; /* For very wide diagrams */
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #d9534f; /* 红色强调 */
+        }
+        .highlight {
+            background-color: #fff3cd; /* 黄色高亮 */
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .product-card h4 {
+            margin-top: 0;
+            color: #5a6268;
+        }
+        .badge {
+            display: inline-block;
+            padding: .25em .4em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25rem;
+        }
+        .badge-blue {
+            color: #fff;
+            background-color: #007bff;
+        }
+        .badge-green {
+            color: #fff;
+            background-color: #28a745;
+        }
+        .badge-orange {
+            color: #212529;
+            background-color: #ffc107;
+        }
+        .badge-red {
+            color: #fff;
+            background-color: #dc3545;
+        }
+        .badge-purple {
+            color: #fff;
+            background-color: #6f42c1;
+        }
+        .badge-grey {
+            color: #fff;
+            background-color: #6c757d;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>私域运营链路设计 (宠物服务赛道 - 端午活动)</h1>
+
+        <p>好的，作为私域运营专家，我为你设计针对抖音和小红书渠道的私域运营链路流程图，并融入你提到的“街猫宠爱寄养十次通用卡”端午节活动。</p>
+
+        <div class="product-card">
+            <h4>活动商品详情：街猫宠爱寄养十次通用卡 (端午特惠)</h4>
+            <p><strong>售价：</strong>500元 (原价：700元)</p>
+            <p><strong>功能描述：</strong>可兑换为10张寄养通用卡，可用于街猫所有寄养家庭使用，不限节假日，不限宠物类型，单次最高可抵扣70元，超出部分需自行支付费用，一共可抵扣10次，总计最高可抵扣700元，有效期自购买开始1年有效。</p>
+            <p><strong>适用范围：</strong>街猫所有寄养家庭，有效期内可任意兑换10次寄养服务。</p>
+            <p><strong>使用说明：</strong>购买后将自动充值到账，可在“街猫-宠物寄养-我的-我的权益”里查看权益详情，预约服务过程中可在订单确认页面使用权益进行抵扣。</p>
+        </div>
+
+        <p><strong>核心目标：</strong> 将公域流量（抖音、小红书）高效转化为私域用户（企业微信），并通过精细化运营促进活动商品转化和用户长期价值提升。</p>
+        <p><strong>色彩搭配建议：</strong></p>
+        <ul>
+            <li><span class="badge badge-blue">蓝色系 (主色调):</span> 代表专业、信任、科技感。</li>
+            <li><span class="badge badge-green">绿色系 (行动/转化):</span> 代表健康、活力、通过。</li>
+            <li><span class="badge badge-orange">橙色/黄色系 (吸引/活动):</span> 代表热情、优惠、吸引力。</li>
+            <li><span class="badge badge-grey">灰色/浅色系 (背景/辅助):</span> 使流程图更加清晰易读。</li>
+        </ul>
+
+        <hr>
+
+        <h2>流程图一：抖音渠道私域运营链路 (端午活动)</h2>
+        <p><strong>渠道特点：</strong> 抖音信息流广告触达精准，用户决策链路相对较短，适合直接引导。</p>
+        <div class="mermaid">
+graph TD
+    subgraph 抖音平台 (蓝色系)
+        A1[<font color='blue'>用户浏览抖音</font><br>刷到“街猫”端午寄养活动<br>信息流广告视频] --> A2{<font color='orange'>广告内容吸引?</font><br>(萌宠画面, 端午主题,<br>“寄养十次卡仅500元”<br>“最高抵700元”痛点/利益点)};
+        A2 -- 是 --> A3[<font color='green'>点击广告<br>进入私信咨询界面</font>];
+        A2 -- 否 --> A4[<font color='grey'>流失或后续再营销</font>];
+        A3 --> A5[<font color='blue'>用户发送预设提问<br>或主动咨询活动详情<br>如：“寄养卡怎么买？”</font>];
+        A5 --> A6[
+            <font color='orange'><b>抖音私信运营号回复</b></font><br>
+            1. 快速响应，感谢咨询<br>
+            2. 简述活动核心价值 (500抵700, 节日通用)<br>
+            3. 引导语：“目前咨询量大，为给您更专业解答/名额有限，请添加官方企微顾问[企微二维码图片/企微号]，备注‘抖音端午’享优先解答及专属福利。”<br>
+            4. <font color='red'><b>关键钩子：</b></font> “加企微可领《新手寄养避坑指南》电子版” / “前XX名加企微送宠物零食小样”
+        ];
+    end
+
+    subgraph 企业微信私域 (绿色系)
+        A6 --> B1[<font color='blue'>用户扫描/搜索<br>添加企业微信</font>];
+        B1 --> B2[
+            <font color='green'><b>企微自动欢迎语 + 人工接待</b></font><br>
+            1. 欢迎语：“亲，欢迎了解街猫端午特惠寄养卡！我是您的专属宠物顾问XX。”<br>
+            2. 确认来源：“请问您是来自抖音渠道了解活动的吗？”<br>
+            3. 发送活动海报/产品详情长图（包含商品名称、售价500、原价700、功能描述、适用范围、使用说明等所有信息）<br>
+            4. 强调限时优惠与价值：“端午特惠，立省200元，一年有效，节假日通用！”
+        ];
+        B2 --> B3{<font color='orange'>用户对活动感兴趣?</font>};
+        B3 -- 是 --> B4[
+            <font color='green'><b>一对一沟通转化</b></font><br>
+            1. 解答用户疑问 (使用限制、家庭选择、安全性等)<br>
+            2. 分享过往用户好评截图/案例<br>
+            3. 引导下单：“可以直接点击下方小程序/链接购买哦，购买后会自动充值到您的街猫账户。”<br>
+            4. <font color='red'><b>逼单技巧：</b></font>“端午名额紧张，建议尽早锁定” / “今日下单加赠XX小礼品”
+        ];
+        B3 -- 否/犹豫 --> B5[
+            <font color='orange'><b>持续培育/激活</b></font><br>
+            1. 拉入活动专属企微群 (可选)<br>
+            2. 标签化管理用户 (如: 意向客户-寄养)<br>
+            3. 定期朋友圈推送养宠知识、其他优惠、用户案例<br>
+            4. 一对一私聊跟进 (如：“亲，上次您咨询的寄养卡还有什么疑问吗？”)
+        ];
+        B4 --> B6[<font color='green'>用户点击链接/小程序<br><b>完成购买“街猫宠爱寄养十次通用卡”</b></font>];
+        B6 --> B7[
+            <font color='green'><b>售后服务与引导</b></font><br>
+            1. 企微发送感谢购买信息<br>
+            2. 引导查看权益：“卡已到账，可在‘街猫-宠物寄养-我的-我的权益’查看”<br>
+            3. 指导如何预约使用：“预约时在订单确认页选择权益抵扣即可。”<br>
+            4. 邀请进阶用户群/福利群
+        ];
+        B7 --> B8[
+            <font color='purple'><b>用户使用服务 & 激活复购/裂变</b></font><br>
+            1. 首次使用后关怀回访<br>
+            2. 引导评价、晒单 (给予小奖励)<br>
+            3. 推广其他服务/产品 (如：宠物鲜粮、玩具等)<br>
+            4. 邀请参与推荐有礼活动，形成口碑传播 (老带新)
+        ];
+        B5 --> B3; # 培育后可能再次产生兴趣
+        B8 --> B8; # 持续运营
+    end
+
+    %% 样式定义
+    classDef blue fill:#E0E7FF,stroke:#7C8AFF,stroke-width:2px;
+    classDef orange fill:#FFF3E0,stroke:#FFB74D,stroke-width:2px;
+    classDef green fill:#E8F5E9,stroke:#81C784,stroke-width:2px;
+    classDef grey fill:#F5F5F5,stroke:#BDBDBD,stroke-width:2px;
+    classDef purple fill:#F3E5F5,stroke:#BA68C8,stroke-width:2px;
+    classDef red color:red;
+
+    class A1,A3,A5 blue;
+    class A2,A6 orange;
+    class A4 grey;
+    class B1,B2,B4,B6,B7 green;
+    class B3,B5 orange;
+    class B8 purple;
+        </div>
+
+        <h3>详细信息标注 (抖音)</h3>
+        <ul>
+            <li><strong>A1: 广告创意</strong>
+                <ul>
+                    <li><strong>视频素材：</strong> 活泼可爱的猫狗在寄养家庭快乐玩耍的场景，突出干净、安全、有爱。</li>
+                    <li><strong>文案：</strong> “端午出游，毛孩子去哪儿？街猫宠爱寄养，十次卡仅500元，最高抵700！专业家庭，放心托付！”</li>
+                    <li><strong>CTA按钮：</strong> “立即私信” 或 “了解详情”。</li>
+                </ul>
+            </li>
+            <li><strong>A6: 抖音私信引导</strong>
+                <ul>
+                    <li><strong>话术模板库：</strong> 针对不同用户提问，准备标准回复，确保效率和专业性。</li>
+                    <li><strong>企微二维码：</strong> 设计精美，突出“官方”、“福利”等字眼。</li>
+                    <li><strong>限时限量：</strong> 强调“端午特惠”、“名额有限”，制造紧迫感。</li>
+                </ul>
+            </li>
+            <li><strong>B2: 企微欢迎与产品介绍</strong>
+                <ul>
+                    <li><strong>活动海报/长图：</strong> 清晰展示商品名称、售价500元、原价700元、功能描述（可兑换10张寄养通用卡，不限节假日和宠物类型，单次最高抵扣70元，总计最高抵扣700元，有效期1年）、适用范围（街猫所有寄养家庭）、使用说明（自动充值到账，预约抵扣）。</li>
+                    <li><strong>顾问形象：</strong> 专业、有爱心、懂宠物。</li>
+                </ul>
+            </li>
+            <li><strong>B4: 转化沟通</strong>
+                <ul>
+                    <li><strong>常见Q&A库：</strong> 提前准备用户可能问到的问题及标准答案。</li>
+                    <li><strong>支付方式：</strong> 小程序商城链接、企微自带支付等。</li>
+                </ul>
+            </li>
+            <li><strong>B7: 售后服务</strong>
+                <ul>
+                    <li><strong>使用教程：</strong> 图文或短视频演示如何在APP/小程序内查看和使用权益。</li>
+                </ul>
+            </li>
+            <li><strong>B8: 闭环与增值</strong>
+                <ul>
+                    <li><strong>用户标签：</strong> 购买用户、活跃用户、高价值用户。</li>
+                    <li><strong>内容营销：</strong> 定期在朋友圈、社群分享养宠知识、节日祝福、平台动态。</li>
+                </ul>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>流程图二：小红书渠道私域运营链路 (端午活动)</h2>
+        <p><strong>渠道特点：</strong> 小红书用户更注重真实体验和内容价值，种草属性强，引导需更自然、有温度。</p>
+        <div class="mermaid">
+graph TD
+    subgraph 小红书平台 (红色/粉色系)
+        C1[<font color='#FFCDD2'>用户浏览小红书</font><br>看到“街猫”关于端午寄养的<br>优质笔记/内容] --> C2{<font color='#FFB74D'>笔记内容/评论区互动<br>是否产生兴趣?</font><br>(真实寄养体验分享, 端午出游宠物安排攻略,<br>巧妙植入“寄养十次卡”优惠)};
+        C2 -- 是 --> C3[<font color='#81C784'>用户在评论区提问<br>或直接私信博主/官方号</font><br>如：“这个寄养卡怎么办理？”];
+        C2 -- 否 --> C4[<font color='#BDBDBD'>流失或通过其他笔记触达</font>];
+        C3 --> C5[
+            <font color='#FFB74D'><b>小红书私信/评论回复</b></font><br>
+            1. 感谢关注/提问，亲切回应<br>
+            2. 强调笔记中产品的核心价值 (划算、便捷、安心)<br>
+            3. 引导语：“宝宝，具体活动详情和办理方式，可以加我们官方企微顾问哦[企微二维码图片/企微号]，备注‘小红书端午’，顾问会给你详细介绍，还能拉你进我们的宠友交流群！”<br>
+            4. <font color='red'><b>关键钩子：</b></font> “加企微可以获取一份《假期寄养全攻略》” / “通过小红书加企微有专属小礼物哦！”
+        ];
+    end
+
+    subgraph 企业微信私域 (绿色系)
+        C5 --> D1[<font color='#AED581'>用户扫描/搜索<br>添加企业微信</font>];
+        D1 --> D2[
+            <font color='#81C784'><b>企微自动欢迎语 + 人工接待</b></font><br>
+            1. 欢迎语：“哈喽小红薯宝宝~欢迎了解街猫端午特惠寄养卡！我是您的专属宠物顾问XX。”<br>
+            2. 确认来源：“您是看到我们小红书的哪篇笔记来的呀？” (便于追踪效果)<br>
+            3. 发送活动海报/产品详情长图（同抖音，包含商品名称、售价500、原价700、功能描述、适用范围、使用说明等）<br>
+            4. 强调优惠与价值：“这款十次卡特别适合经常需要寄养的宝宝，一年有效，节假日也能用，算下来超划算！”
+        ];
+        D2 --> D3{<font color='#FFB74D'>用户对活动感兴趣?</font>};
+        D3 -- 是 --> D4[
+            <font color='#81C784'><b>一对一沟通转化</b></font><br>
+            1. 耐心解答疑问 (寄养家庭环境、安全性、如何挑选等)<br>
+            2. 分享更多用户真实反馈、寄养家庭实拍图/视频<br>
+            3. 引导下单：“可以直接点击下方小程序/链接购买哦，购买后会自动充值到您的街猫账户，超级方便！”<br>
+            4. <font color='red'><b>营造氛围：</b></font> “很多小红书的宝妈都给自家毛孩子囤了这个卡” / “现在下单，端午出行就不愁啦！”
+        ];
+        D3 -- 否/犹豫 --> D5[
+            <font color='#FFB74D'><b>持续培育/激活 (更侧重内容与社群)</b></font><br>
+            1. 邀请加入小红书粉丝专属企微群 (分享养宠日常、答疑、福利)<br>
+            2. 标签化管理 (如: 小红书粉丝-养猫/养狗-意向寄养)<br>
+            3. 朋友圈推送优质养宠内容、萌宠日常、街猫服务动态、用户好评<br>
+            4. 一对一私聊提供个性化建议 (如：“宝宝家的XX品种，我们有特别擅长照顾的寄养家庭哦” )
+        ];
+        D4 --> D6[<font color='#81C784'>用户点击链接/小程序<br><b>完成购买“街猫宠爱寄养十次通用卡”</b></font>];
+        D6 --> D7[
+            <font color='#81C784'><b>售后服务与引导</b></font><br>
+            1. 企微发送感谢购买信息，语气更亲切<br>
+            2. 引导查看权益：“卡片已经到账啦，可以在‘街猫-宠物寄养-我的-我的权益’里看到哦”<br>
+            3. 指导如何预约使用，并附上预约小贴士<br>
+            4. 邀请参与小红书话题打卡、晒单有奖
+        ];
+        D7 --> D8[
+            <font color='#CE93D8'><b>用户使用服务 & 激活复购/裂变 (社群互动)</b></font><br>
+            1. 首次使用后，邀请在社群分享体验<br>
+            2. 引导在小红书发布真实体验笔记@官方号 (给予高价值奖励)<br>
+            3. 在社群内推广其他适配产品/服务<br>
+            4. 鼓励用户在自己的小红书圈子分享推荐 (素材支持)
+        ];
+        D5 --> D3; # 培育后可能再次产生兴趣
+        D8 --> D8; # 持续运营
+    end
+
+    %% 样式定义
+    classDef xhs-platform fill:#FFEBEE,stroke:#F48FB1,stroke-width:2px;
+    classDef xhs-action fill:#FFF9C4,stroke:#FFD54F,stroke-width:2px;
+    classDef xhs-convert fill:#C8E6C9,stroke:#A5D6A7,stroke-width:2px;
+    classDef xhs-grey fill:#F5F5F5,stroke:#BDBDBD,stroke-width:2px;
+    classDef xhs-retain fill:#E1BEE7,stroke:#CE93D8,stroke-width:2px;
+    classDef red color:red;
+
+    class C1 xhs-platform;
+    class C2,C5 xhs-action;
+    class C3,D1,D2,D4,D6,D7 xhs-convert;
+    class C4 xhs-grey;
+    class D3,D5 xhs-action;
+    class D8 xhs-retain;
+        </div>
+        <h3>详细信息标注 (小红书)</h3>
+        <ul>
+            <li><strong>C1: 笔记内容创意</strong>
+                <ul>
+                    <li><strong>类型：</strong>
+                        <ul>
+                            <li><strong>真实体验型：</strong> “端午带狗子住进了神仙寄养家庭！街猫YYDS！” (多图+详细感受)</li>
+                            <li><strong>攻略型：</strong> “端午假期宠物寄养不踩坑！N个实用Tips+超值寄养卡推荐”</li>
+                            <li><strong>问题解决型：</strong> “假期出游，毛孩子怎么办？我给主子选了街猫的寄养十次卡，安心！”</li>
+                        </ul>
+                    </li>
+                    <li><strong>图片/视频：</strong> 高颜值、温馨、真实，符合小红书审美。</li>
+                    <li><strong>文案：</strong> 口语化、有温度、带表情符号，巧妙植入“街猫宠爱寄养十次通用卡”及其优惠点。</li>
+                    <li><strong>标签：</strong> #宠物寄养 #端午去哪儿 #猫咪寄养 #狗狗寄养 #街猫 #养宠攻略 #省钱攻略</li>
+                </ul>
+            </li>
+            <li><strong>C5: 小红书私信/评论引导</strong>
+                <ul>
+                    <li><strong>语气：</strong> 亲切、友好，像和朋友聊天。使用“宝宝”、“亲”、“小红薯”等昵称。</li>
+                    <li><strong>价值导向：</strong> 强调加企微能获得的额外价值，如专属顾问、宠友群、攻略资料。</li>
+                </ul>
+            </li>
+            <li><strong>D2: 企微欢迎与产品介绍</strong>
+                <ul>
+                    <li><strong>活动海报/长图：</strong> 同上，确保所有产品信息清晰。</li>
+                    <li><strong>个性化互动：</strong> 询问用户从哪篇笔记来，可以开启更相关的话题。</li>
+                </ul>
+            </li>
+            <li><strong>D4: 转化沟通</strong>
+                <ul>
+                    <li><strong>共情与信任：</strong> 理解养宠人士对寄养的担忧，提供安心保障的证明 (如寄养家庭审核机制、保险等)。</li>
+                    <li><strong>社群氛围：</strong> 强调很多人已经购买，营造“大家都在用”的从众效应。</li>
+                </ul>
+            </li>
+            <li><strong>D7: 售后服务</strong>
+                <ul>
+                    <li><strong>鼓励分享：</strong> 引导用户在小红书发布笔记，并给予奖励，反哺公域流量。</li>
+                </ul>
+            </li>
+            <li><strong>D8: 闭环与增值</strong>
+                <ul>
+                    <li><strong>UGC内容激励：</strong> 重点鼓励用户在小红书产出优质内容，形成内容裂变。</li>
+                    <li><strong>社群运营：</strong> 将小红书粉丝群打造成高活跃度、高粘性的社群，进行深度运营。</li>
+                </ul>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>通用闭环关键点</h2>
+        <ul>
+            <li><strong>数据追踪：</strong> 通过UTM参数、企微渠道活码等方式，追踪各渠道引流效果和转化率。</li>
+            <li><strong>用户标签精细化：</strong> 在企微中为用户打上详细标签（来源渠道、宠物类型、消费能力、活跃度等），以便进行精准营销和服务。</li>
+            <li><strong>内容持续输出：</strong> 无论在哪个平台，优质、有价值的内容是持续吸引和转化用户的核心。</li>
+            <li><strong>活动周期性：</strong> 端午活动结束后，规划下一阶段的营销活动，保持用户活跃度和私域价值。</li>
+            <li><strong>客户服务质量：</strong> 响应速度、专业程度、服务态度直接影响转化和口碑。</li>
+        </ul>
+
+        <p>这些流程图和标注信息应该能帮助你清晰地规划和执行私域运营。祝你的端午活动大卖！</p>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+</body>
+</html>
